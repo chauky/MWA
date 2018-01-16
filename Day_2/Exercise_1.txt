@@ -1,0 +1,9 @@
+1. Explain why do we want sometimes to use setImmediate instead of using setTimeout?
+- Sometimes we use setImmediate to provide data/result for the next event after I/O events completed, while using setTimeout we don't know when the I/O event are completed.
+
+2. Explain the difference between process.netTick and setImmediate?
+- The process.nextTick called to put the events into nextTick queue and then call to execute all of them.
+- The setImmediate called to execute events in check queue after the I/O events completed.
+
+3. Name 10 global module available in Node evironment
+buffer, assert, clearImmediate, console, domain, dns, require, events, http, os
