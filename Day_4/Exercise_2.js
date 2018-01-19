@@ -1,5 +1,18 @@
 const os = require('os');
 
+function myObservable(observer){
+    observer.next("System is checked succesfully.");
+    observer.complete();
+
+}
+
+const observer = {
+    next: function(value){console.log(value)},
+    error: function(e){},
+    complete:function(){console.log('complete')},
+};
+
+
 function checkCPU() {
     console.log("Checking your system...")
     if (os.cpus().length <= 2) {
@@ -9,7 +22,8 @@ function checkCPU() {
         console.log("This app needs at leat 4GB of RAM");
     }
     else {
-        console.log("System is checked succesfully.");
+        myObservable(observer);
     }
 }
+
 checkCPU();
