@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
 
-// const fetchUser = require('./fetchPromise');
+const fetchUser = require('./fetchPromise');
 // const fetchUser = require('./fetchAsync');
-const fetchUser = require('./fetchObservable');
+// const fetchUser = require('./fetchObservable');
 
 const app = express();
 
@@ -24,4 +24,4 @@ app.get('/users', function(req, res) {
     fetchUser(res);
 });
 
-app.listen(3000, function() {console.log('server listening on port 3000')});
+app.listen(4000, function() {console.log('server listening on port 4000')});
