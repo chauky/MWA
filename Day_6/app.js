@@ -5,6 +5,7 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var validator = require('express-validator');
+var cors = require('cors');
 
 
 // var index = require('./routes/index');
@@ -22,6 +23,7 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // app.use(logger('dev'));
 app.use(morgan('combined'));
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(validator());
