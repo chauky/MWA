@@ -1,0 +1,13 @@
+Book{
+	ISBN:'',
+	Author:'',
+	tags:['keyword1', 'keyword2'],
+	borrow:{
+		student:{
+				name:'',
+				address:'',
+				phone:''
+				}
+		date: Date
+	}
+}
