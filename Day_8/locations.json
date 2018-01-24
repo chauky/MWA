@@ -1,0 +1,25 @@
+{
+    "name": "MUM University",
+	"category": "University",
+    "address": [-91.964773, 41.022148]
+}
+{
+    "name": "Fairfield Post Office",
+    "category": "Office",
+    "address": [-91.9654505, 41.0075201]
+}
+{
+    "name": "Saint Mary School",
+    "category": "School",
+    "address": [-91.9668395, 41.0108533]
+}
+{
+    "name": "Central Park",
+    "category": "Park",
+    "address": [-91.9618393, 41.0072424]
+}
+{
+    "name": "Saint Marys Catholic Church",
+    "category": "Church",
+    "address": [ -91.9665617, 41.0105756]
+}
