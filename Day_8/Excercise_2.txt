@@ -1,4 +1,4 @@
-Book{
+var Book = {
 	ISBN:'',
 	Author:'',
 	tags:['keyword1', 'keyword2'],
@@ -8,6 +8,8 @@ Book{
 				address:'',
 				phone:''
 				}
-		date: Date
+		date: new Date
 	}
 }
+
+db.col.createIndex("borrow.date");
