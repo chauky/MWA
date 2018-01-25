@@ -5,6 +5,7 @@ var router = express.Router();
 
 var db = mongo.db('mongodb://localhost:27017/locations', { native_parser: true });
 var myCollection = db.collection('locations');
+myCollection.createIndex({"address":"2d"});
 
 
 //GET/READ
