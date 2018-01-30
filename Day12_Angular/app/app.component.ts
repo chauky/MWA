@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public ComponentCounterValue = 10;
+  public ComponentCounterValue = 0;
 
   showOutputData(data){
     this.ComponentCounterValue = data;

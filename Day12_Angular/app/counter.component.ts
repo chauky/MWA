@@ -9,26 +9,34 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class CounterComponent {
   public counterValue;
-  @Input() counter:number;
+  @Input() counter: number;
   @Output() counterChange = new EventEmitter();
 
 
-  emitCounter(){
+  emitCounter() {
     this.counterChange.emit(this.counterValue);
   }
 
   constructor() {
-    this.counterValue = 0;
-    this.emitCounter();
-    }
 
+    this.emitCounter();
+  }
+
+  ngOnInit() {
+    this.counterValue = this.counter;
+    
+  }
   plus() {
+    
     this.counterValue = this.counterValue + 1;
+    this.emitCounter();
     return false;
   }
 
   minus() {
+    
     this.counterValue = this.counterValue - 1;
+    this.emitCounter();
     return false;
   }
 }
