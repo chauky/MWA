@@ -1,5 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-array [arrayString]= "[1,2,3,4,5]"></app-array>
+<app-array [arrayString]= "[1,2,3,4,5]" (emitColor)="showColor($event)"></app-array>
+
+<p>The color you choose is: {{mycolor}}</p>
 
 
   
