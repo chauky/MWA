@@ -1,29 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { DbService } from "./db.service";
+
 
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css'],
-  providers: [DbService]
+  providers: []
 })
 export class StudentsComponent implements OnInit {
-  private data;
-  public id;
-  public name;
-  public link = "";
-
-
+  public data:any[];
   ngOnInit() {
    // this.data = this.dbservice.getData();
   }
-  constructor(private dbservice: DbService) {
+  constructor(private dbservice: DbService, private routes: ActivatedRoute) {
     this.data = this.dbservice.getData();
-    this.id = this.data[0]['_id'];
-    this.name = this.data[0]['name'];
-    //this.link = "<ul><li><a href=" + this.id + ">" + this.name+ "</a></li></ul>";
-
   }
 
 }

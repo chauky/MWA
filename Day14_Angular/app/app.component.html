@@ -2,10 +2,10 @@ Welcome to ABC university !
 <br/>
 <ul>
     <li>
-        <a routerLink="['home']">home</a>
+        <a [routerLink]="['home']">home</a>
     </li>
     <li>
-        <a routerLink="['student']" (click)="onNavigate()">students</a>
+        <a [routerLink]="['students']">students</a>
     </li>
     <!-- //<a [routerLink]="['students', 'profile']" [queryParams]="{id: id.value}">Query Param</a>  -->
 </ul>

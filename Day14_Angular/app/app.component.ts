@@ -12,6 +12,6 @@ export class AppComponent {
 
   onNavigate() {
     // Imperative Routing
-    this.router.navigate(['students']);
+    // this.router.navigate(['students']);
   }
 }

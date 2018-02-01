@@ -1,2 +1,2 @@
-<ul><li><a href ="/profile/1">  {{name}} </a></li></ul>
+<ul *ngFor ='let item of data'><li><a [routerLink] ="['/profile', item._id]">  {{item.name}} </a></li></ul>
 <router-outlet></router-outlet>
