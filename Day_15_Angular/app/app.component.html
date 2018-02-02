@@ -1,0 +1,22 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <br/>
+    <input type="text" class="form-control" id="name" formControlName="name" value={{name}}>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <br/>
+    <input type="text" class="form-control" id="email" formControlName="email" value={{email}}>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="post">Post</label>
+    <br/>
+    <textarea class="form-control" id="post" formControlName="post" value={{post}}>Enter text here...</textarea>
+  </div>
+  <br/>
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+  <button type="button" class="btn btn-default" (click)="getData()">Get Data</button>
+</form>
