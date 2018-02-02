@@ -1,12 +1,23 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="myForm">
   <div class="form-group">
+    <label for="name">Name</label>
+    <br/>
     <input type="text" class="form-control" id="name" formControlName="name">
   </div>
+  <br/>
   <div class="form-group">
-     <input type="text" class="form-control" id="email" formControlName="email">
+    <label for="email">Email</label>
+    <br/>
+    <input type="text" class="form-control" id="email" formControlName="email">
   </div>
+  <br/>
   <div class="form-group">
-    <input type="text" class="form-control" id="post" formControlName="post">
+    <label for="post">Post</label>
+    <br/>
+    <textarea class="form-control" id="post" formControlName="post">Enter text here...</textarea>
   </div>
-
+  <br/>
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid" (click)="printData()">Submit</button>
+  <button type="button" class="btn btn-default" (click)="getData()">Get Data</button>
 </form>
+<router-outlet></router-outlet>
