@@ -4,17 +4,26 @@
     <br/>
     <input type="text" class="form-control" id="name" formControlName="name">
   </div>
+  <div>
+    <span *ngIf="!myForm.controls['name'].valid" style="color:red">Required</span>
+  </div>
   <br/>
   <div class="form-group">
     <label for="email">Email</label>
     <br/>
     <input type="text" class="form-control" id="email" formControlName="email">
   </div>
+  <div>
+    <span *ngIf="!myForm.controls['email'].valid" style="color:red">Required</span>
+  </div>
   <br/>
   <div class="form-group">
     <label for="post">Post</label>
     <br/>
     <textarea class="form-control" id="post" formControlName="post">Enter text here...</textarea>
+  </div>
+  <div>
+    <span *ngIf="!myForm.controls['post'].valid" style="color:red">Minimum length 10</span>
   </div>
   <br/>
   <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid" (click)="printData()">Submit</button>

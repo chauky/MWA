@@ -50,12 +50,9 @@ export class DataFormComponent{
   }
 
   printData() {
-    console.log(this.data1['name']);
-    console.log(this.data1['email']);
-    console.log(this.data2[0].body);
+    console.log(this.myForm)
     this.onNavigate();
   }
   onNavigate() {
     this.router.navigate(['thankyou']);;
   }
-}
